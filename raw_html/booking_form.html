@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room Booking Form</title>
+    <!-- custom-theme -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="Room Booking Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+          name="keywords"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!-- //custom-theme -->
+    <!-- js -->
+    <script src="js/booking_form/jquery.min.js"></script>
+    <!-- //js -->
+    <!-- font-awesome-icons -->
+    <link href="css/booking_form/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="css/booking_form/style.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
+          rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <h1>Room Booking Form</h1>
+    <div class="w3_agile_main_grids">
+
+        <div id='progress'>
+            <div id='progress-complete'></div>
+        </div>
+
+        <form action="#" class="agile_form" id="SignupForm" method="post">
+            <fieldset>
+                <h3>Account information</h3>
+                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
+                    <div class="wthree_input">
+                        <i aria-hidden="true" class="fa fa-user"></i>
+                        <input class="form-control" id="Name" name="Name" placeholder="Name" required="" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group agileits_w3layouts_form">
+                    <div class="wthree_input">
+                        <i aria-hidden="true" class="fa fa-envelope"></i>
+                        <input class="form-control" id="Email" name="Email" placeholder="Email" required=""
+                               type="email"/>
+                    </div>
+                </div>
+                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
+                    <div class="wthree_input">
+                        <i aria-hidden="true" class="fa fa-file-text"></i>
+                        <input class="form-control" id="Subject" name="Subject" placeholder="Subject" required=""
+                               type="text"/>
+                    </div>
+                </div>
+                <div class="form-group agileits_w3layouts_form">
+                    <div class="wthree_input">
+                        <i aria-hidden="true" class="fa fa-key"></i>
+                        <input class="form-control" id="Password" name="Password" placeholder="Password" required=""
+                               type="password"/>
+                    </div>
+                </div>
+                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
+                    <div class="wthree_input">
+                        <i aria-hidden="true" class="fa fa-globe"></i>
+                        <select class="form-control">
+                            <option selected="" value="Country">Country</option>
+                            <option value="Afghanistan"> Afghanistan</option>
+                            <option value="Albania"> Albania</option>
+                            <option value="Algeria"> Algeria</option>
+                            <option value="American Samoa"> American Samoa</option>
+                            <option value="Andorra"> Andorra</option>
+                            <option value="Angola"> Angola</option>
+                            <option value="Anguilla"> Anguilla</option>
+                            <option value="Antarctica"> Antarctica</option>
+                            <option value="...">...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3>Room Type</h3>
+                <h4 class="w3layouts_type">What type of room would you want ?</h4>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>Single
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Family
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Business
+                        </label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3>Room Type</h3>
+                <h4 class="w3layouts_type">Bạn thích đến địa điểm như thế nào ?</h4>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>Vùng cao
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Vùng biển
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Đảo
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Thành thị
+                        </label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3>Room Type</h3>
+                <h4 class="w3layouts_type">Bạn thích ... ?</h4>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>Vùng đông dân cư
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Vùng hẻo lánh
+                        </label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3>Room Type</h3>
+                <h4 class="w3layouts_type">Bạn dự định đi khoảng bao nhiêu người ?</h4>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>Alone
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>2 - 4 person
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>4 - 8 person
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>> 8 person
+                        </label>
+                    </div>
+                </div>                
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3>Room Type</h3>
+                <h4 class="w3layouts_type">Chuyến du lịch của bạn kéo dài trong bao lâu ?</h4>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>a day
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>2 - 4 days
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>a week
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>> 1 week
+                        </label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3>Room Type</h3>
+                <h4 class="w3layouts_type">Bạn chuộng thức ăn miền nào nhất ?</h4>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>North
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Central
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>South
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Local foods
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-building-o"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Everything
+                        </label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3>Room Type</h3>
+                <h4 class="w3layouts_type">Bạn thích phong cách thoải mái hay quy cũ ?</h4>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>Thoải mái về thời gian
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Bám sát lịch trình
+                        </label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3>Room Type</h3>
+                <h4 class="w3layouts_type">Bạn cảm thấy phù hợp với chủ nhà như thế nào ?</h4>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>Trẻ trung, năng động
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Lớn tuổi, dày dặn kinh nghiệm
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-user"></span>
+                        <label class="radio">
+                            <input checked="" name="radio" type="radio">
+                            <i></i>Single
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group agileits_circles">
+                    <div class="wthree_radio">
+                        <span aria-hidden="true" class="fa fa-home"></span>
+                        <label class="radio">
+                            <input name="radio" type="radio">
+                            <i></i>Married
+                        </label>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </fieldset>
+
+            <fieldset>
+                <h3 class="w3_room">Room Details</h3>
+                <div class="form-group w3ls_description">
+                    <i aria-hidden="true" class="fa fa-align-right"></i>
+                    <textarea name="Message" placeholder="Your message here..." required=""></textarea>
+                </div>
+            </fieldset>
+
+            <p>
+                <button class="btn btn-primary agileinfo_primary submit" id="SaveAccount">Submit form</button>
+            </p>
+        </form>
+
+        <div class="agileits_copyright">
+            <p>© 2018 Room Booking Form. All rights reserved | Design by Travelie</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/booking_form/jquery.validate.min.js"></script>
+<script src="js/booking_form/jquery.formtowizard.js"></script>
+
+<script>
+    $(function () {
+        var $signupForm = $('#SignupForm');
+
+        $signupForm.validate({errorElement: 'em'});
+
+        $signupForm.formToWizard({
+            submitButton: 'SaveAccount',
+            nextBtnClass: 'btn btn-primary next',
+            prevBtnClass: 'btn btn-default prev',
+            buttonTag: 'button',
+            validateBeforeNext: function (form, step) {
+                var stepIsValid = true;
+                var validator = form.validate();
+                $(':input', step).each(function (index) {
+                    var xy = validator.element(this);
+                    stepIsValid = stepIsValid && (typeof xy == 'undefined' || xy);
+                });
+                return stepIsValid;
+            },
+            progress: function (i, count) {
+                $('#progress-complete').width('' + (i / count * 100) + '%');
+            }
+        });
+    });
+</script>
+</body>
+</html>
