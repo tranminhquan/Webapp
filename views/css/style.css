@@ -9800,3 +9800,28 @@ textarea.form-control {
     background: #f85959;
     border: 2px solid #f85959;
   color: #FFF; }
+
+/* 2.4.6 SCROLL TOP*/
+.scrollToTop {
+    width: 42px;
+    height: 42px;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    display: none;
+    font-size: 40px;
+    background: #232323;
+    color: #ebebeb;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 42px;
+    z-index: 999;
+}
+
+.scrollToTop:hover {
+    color: #FFF;
+}
+
+.scrollToTop:focus {
+    color: #FFF;
+}
