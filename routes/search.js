@@ -6,9 +6,9 @@ router.get('/', function(req, res, next) {
     res.render('search');
 });
 
-router.post('/', function(req, res, next){
+router.post('/register', function(req, res, next){
     try{
-
+        res.render('index', { title: req.body.roomtype_radio });
     } catch(error){
 
     }
