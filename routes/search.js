@@ -6,4 +6,12 @@ router.get('/', function(req, res, next) {
     res.render('search');
 });
 
+router.post('/', function(req, res, next){
+    try{
+
+    } catch(error){
+
+    }
+});
+
 module.exports = router;
