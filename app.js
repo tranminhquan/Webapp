@@ -13,7 +13,7 @@ const app = express();
 
 // set up mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:5000/travelbooking');
+mongoose.connect('mongodb://localhost:27017/travelbooking');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
