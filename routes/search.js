@@ -6,4 +6,12 @@ router.get('/', function(req, res, next) {
     res.render('search');
 });
 
+router.post('/register', function(req, res, next){
+    try{
+        res.render('index', { title: req.body.roomtype_radio, sub: req.body.locationtype_radio });
+    } catch(error){
+
+    }
+});
+
 module.exports = router;
