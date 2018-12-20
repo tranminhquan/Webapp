@@ -7,8 +7,8 @@ const homestaySchema = new Schema({
     address: String,
     nb_people: String,
     np_days: Number,
-    time_start: Number,
-    time_end: Number,
+    time_start: Number, // Activity
+    time_end: Number,   // Activity
     rating: Number,
     overview:[String],
     owner:{
@@ -17,7 +17,7 @@ const homestaySchema = new Schema({
         dob: Date,
         gender: Boolean,
         phone: String,
-        job: String
+        career: String
     },
     tour:{
         images: [String],
