@@ -36,56 +36,7 @@
             <div id='progress-complete'></div>
         </div>
 
-        <form action="#" class="agile_form" id="SignupForm" method="post">
-            <!--<fieldset>
-                <h3>Account information</h3>
-                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
-                    <div class="wthree_input">
-                        <i aria-hidden="true" class="fa fa-user"></i>
-                        <input class="form-control" id="Name" name="Name" placeholder="Name" required="" type="text"/>
-                    </div>
-                </div>
-                <div class="form-group agileits_w3layouts_form">
-                    <div class="wthree_input">
-                        <i aria-hidden="true" class="fa fa-envelope"></i>
-                        <input class="form-control" id="Email" name="Email" placeholder="Email" required=""
-                               type="email"/>
-                    </div>
-                </div>
-                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
-                    <div class="wthree_input">
-                        <i aria-hidden="true" class="fa fa-file-text"></i>
-                        <input class="form-control" id="Subject" name="Subject" placeholder="Subject" required=""
-                               type="text"/>
-                    </div>
-                </div>
-                <div class="form-group agileits_w3layouts_form">
-                    <div class="wthree_input">
-                        <i aria-hidden="true" class="fa fa-key"></i>
-                        <input class="form-control" id="Password" name="Password" placeholder="Password" required=""
-                               type="password"/>
-                    </div>
-                </div>
-                <div class="form-group agileits_w3layouts_form w3_agileits_margin">
-                    <div class="wthree_input">
-                        <i aria-hidden="true" class="fa fa-globe"></i>
-                        <select class="form-control">
-                            <option selected="" value="Country">Country</option>
-                            <option value="Afghanistan"> Afghanistan</option>
-                            <option value="Albania"> Albania</option>
-                            <option value="Algeria"> Algeria</option>
-                            <option value="American Samoa"> American Samoa</option>
-                            <option value="Andorra"> Andorra</option>
-                            <option value="Angola"> Angola</option>
-                            <option value="Anguilla"> Anguilla</option>
-                            <option value="Antarctica"> Antarctica</option>
-                            <option value="...">...</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </fieldset>-->
-
+        <form action="/search/register" class="agile_form" id="SignupForm" method="post">
             <fieldset>
                 <h3>Room Type</h3>
                 <h4 class="w3layouts_type">What kind of room would you want ?</h4>
@@ -93,7 +44,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fa fa-user"></span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="roomtype_radio" value="single" type="radio">
                             <i></i>Single
                         </label>
                     </div>
@@ -102,7 +53,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-home"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="roomtype_radio" value="family" type="radio">
                             <i></i>Family
                         </label>
                     </div>
@@ -111,7 +62,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-building"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="roomtype_radio" value="business" type="radio">
                             <i></i>Business
                         </label>
                     </div>
@@ -126,7 +77,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-mountain"></span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="locationtype_radio" value="mountainous" type="radio">
                             <i></i>Mountainous
                         </label>
                     </div>
@@ -135,7 +86,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-umbrella-beach"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="locationtype_radio" value="seaside" type="radio">
                             <i></i>Seaside
                         </label>
                     </div>
@@ -144,7 +95,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-kiwi-bird"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="locationtype_radio" value="island" type="radio">
                             <i></i>Island
                         </label>
                     </div>
@@ -153,7 +104,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-city"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="locationtype_radio" value="urban" type="radio">
                             <i></i>Urban
                         </label>
                     </div>
@@ -163,7 +114,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-tree"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="locationtype_radio" value="rural" type="radio">
                             <i></i>Rural
                         </label>
                     </div>
@@ -172,13 +123,13 @@
             </fieldset>
 
             <fieldset>
-                <h3>Location Type</h3>
+                <h3>Vacation Type</h3>
                 <h4 class="w3layouts_type">What kind of vacation do you prefer ?</h4>
                 <div class="form-group agileits_circles">
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="material-icons">people</span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="vacationtype_radio" value="residentialarea" type="radio">
                             <i></i>Residential Area
                         </label>
                     </div>
@@ -187,7 +138,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-mountain"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="vacationtype_radio" value="expedition" type="radio">
                             <i></i>Expedition
                         </label>
                     </div>
@@ -202,7 +153,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fa fa-user"></span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="nbtravellers_radio" value="1" type="radio">
                             <i></i>By yourself
                         </label>
                     </div>
@@ -211,7 +162,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fa fa-home"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="nbtravellers_radio" value="2to4" type="radio">
                             <i></i>2 - 4 persons
                         </label>
                     </div>
@@ -220,7 +171,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fa fa-group"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="nbtravellers_radio" value="4to8" type="radio">
                             <i></i>4 - 8 persons
                         </label>
                     </div>
@@ -229,7 +180,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-building"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="nbtravellers_radio" value=">8" type="radio">
                             <i></i>> 8 persons
                         </label>
                     </div>
@@ -244,7 +195,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-sun"></span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="duration_radio" value="1" type="radio">
                             <i></i>A day out
                         </label>
                     </div>
@@ -253,7 +204,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-cloud-sun"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="duration_radio" value="2to4" type="radio">
                             <i></i>2 - 4 days
                         </label>
                     </div>
@@ -262,7 +213,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-cloud-sun-rain"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="duration_radio" value="7" type="radio">
                             <i></i>A week
                         </label>
                     </div>
@@ -271,7 +222,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="far fa-calendar-alt"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="duration_radio" value=">7" type="radio">
                             <i></i>> 1 week
                         </label>
                     </div>
@@ -286,7 +237,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-arrow-up"></span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="cuisine_radio" value="northern" type="radio">
                             <i></i>Northern
                         </label>
                     </div>
@@ -295,7 +246,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-dot-circle"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="cuisine_radio" value="central" type="radio">
                             <i></i>Central
                         </label>
                     </div>
@@ -304,7 +255,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-arrow-down"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="cuisine_radio" value="southern" type="radio">
                             <i></i>Southern
                         </label>
                     </div>
@@ -313,7 +264,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="material-icons">location_on</span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="cuisine_radio" value="local_dishes" type="radio">
                             <i></i>Local dishes
                         </label>
                     </div>
@@ -322,7 +273,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="material-icons">more_horiz</span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="cuisine_radio" value="all" type="radio">
                             <i></i>I am not so picky
                         </label>
                     </div>
@@ -337,7 +288,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-gamepad"></span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="lifestyle_radio" value="leisure" type="radio">
                             <i></i>I am a typically Leisure person
                         </label>
                     </div>
@@ -346,7 +297,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-calendar-check"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="lifestyle_radio" value="savvy" type="radio">
                             <i></i>I am a Systems Savvy
                         </label>
                     </div>
@@ -355,13 +306,13 @@
             </fieldset>
 
             <fieldset>
-                <h3>Host</h3>
-                <h4 class="w3layouts_type">How is a homestay's host suitable for you ?</h4>
+                <h3>Owner</h3>
+                <h4 class="w3layouts_type">How is a homestay's owner suitable for you ?</h4>
                 <div class="form-group agileits_circles">
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-child"></span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="owner_radio" value="youthful" type="radio">
                             <i></i>A youthful and energetic
                         </label>
                     </div>
@@ -370,7 +321,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-book-open"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="owner_radio" value="experience" type="radio">
                             <i></i>An experienced elderly
                         </label>
                     </div>
@@ -379,7 +330,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fa fa-user"></span>
                         <label class="radio">
-                            <input checked="" name="radio" type="radio">
+                            <input checked="" name="owner_radio" value="single" type="radio">
                             <i></i>Single
                         </label>
                     </div>
@@ -388,7 +339,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fa fa-home"></span>
                         <label class="radio">
-                            <input name="radio" type="radio">
+                            <input name="owner_radio" value="married" type="radio">
                             <i></i>Married
                         </label>
                     </div>
@@ -405,12 +356,15 @@
             </fieldset>
 
             <p>
-                <button class="btn btn-primary agileinfo_primary submit" id="SaveAccount">Submit form</button>
+                <button class="btn btn-primary agileinfo_primary submit" type="submit" id="SaveAccount">Submit form</button>
             </p>
         </form>
 
         <div class="agileits_copyright">
-            <p>© 2018 Homestay Booking Form. All rights reserved | Design by Travelie</p>
+            <p> Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script>
+                Absoluke Team
+            </p>
         </div>
     </div>
 </div>
