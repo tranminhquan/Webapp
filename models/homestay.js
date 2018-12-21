@@ -5,6 +5,7 @@ const homestaySchema = new Schema({
     feature_images: [String],
     name: String,
     address: String,
+    distance: String,
     nb_people: String,
     np_days: Number,
     time_start: Number, // Activity
@@ -30,6 +31,8 @@ const homestaySchema = new Schema({
     rule:{
         description: [String]
     },
+    video: String,
+    comment: [String],
 });
 
 const Homestay = mongoose.model('Homestay', homestaySchema);
