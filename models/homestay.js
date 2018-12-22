@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/travelbooking');
 const Schema = mongoose.Schema;
 
 const homestaySchema = new Schema({
@@ -15,7 +16,7 @@ const homestaySchema = new Schema({
     owner:{
         image: String,
         name: String,
-        dob: Date,
+        dob: String,
         gender: Boolean,
         phone: String,
         career: String
@@ -35,5 +36,5 @@ const homestaySchema = new Schema({
     comment: [String],
 });
 
-const Homestay = mongoose.model('Homestay', homestaySchema);
+const Homestay = mongoose.model('homestays', homestaySchema);
 module.exports = Homestay;
