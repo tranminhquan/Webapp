@@ -26,7 +26,6 @@ router.post('/', function (req, res, next) {
 });
 
 router.get('/', function (req, res, next) {
-    // Homestay.find({'np_days' : 2}).exec((err, data) => {
     Homestay.find().exec((err, data) => {
         if (!err && data != '') {
 
