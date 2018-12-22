@@ -36,7 +36,7 @@
             <div id='progress-complete'></div>
         </div>
 
-        <form action="/search/register" class="agile_form" id="SignupForm" method="post">
+        <form action="/listHomestay" class="agile_form" id="SignupForm" method="get">
             <fieldset>
                 <h3>Destination</h3>
                 <h4 class="w3layouts_type">Where do you want to spend your time?</h4>
@@ -378,13 +378,13 @@
             </fieldset>
 
             <fieldset>
-                <h3>Owner</h3>
-                <h4 class="w3layouts_type">How is a homestay's owner suitable for you ?</h4>
+                <h3>Host</h3>
+                <h4 class="w3layouts_type">How is a homestay's host suitable for you ?</h4>
                 <div class="form-group agileits_circles">
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-child"></span>
                         <label class="radio">
-                            <input checked="" name="owner_radio" value="youthful" type="radio">
+                            <input checked="" name="host_radio" value="youthful" type="radio">
                             <i></i>A youthful and energetic
                         </label>
                     </div>
@@ -393,7 +393,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fas fa-book-open"></span>
                         <label class="radio">
-                            <input name="owner_radio" value="experience" type="radio">
+                            <input name="host_radio" value="experience" type="radio">
                             <i></i>An experienced elderly
                         </label>
                     </div>
@@ -402,7 +402,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fa fa-user"></span>
                         <label class="radio">
-                            <input checked="" name="owner_radio" value="single" type="radio">
+                            <input checked="" name="host_radio" value="single" type="radio">
                             <i></i>Single
                         </label>
                     </div>
@@ -411,7 +411,7 @@
                     <div class="wthree_radio">
                         <span aria-hidden="true" class="fa fa-home"></span>
                         <label class="radio">
-                            <input name="owner_radio" value="married" type="radio">
+                            <input name="host_radio" value="married" type="radio">
                             <i></i>Married
                         </label>
                     </div>

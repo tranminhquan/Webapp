@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('search');
+    res.render('listHomestay', {title: 'Travelie - List homestays'});
 });
 
-router.post('/listHomestay', function(req, res, next){
+router.post('/detailHomestay', function(req, res, next){
     try{
-        res.render('listHomestay', { title: 'Travelie - List homestays'});
+        res.render('detailHomestay', {title: 'Travelie - Card detail'});
     } catch(error){
 
     }
