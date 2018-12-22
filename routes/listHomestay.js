@@ -5,10 +5,19 @@ var Homestay = require('../models/homestay');
 /* GET home page. */
 router.post('/', function (req, res, next) {
     // Homestay.find({'np_days' : 2}).exec((err, data) => {
+    filter = {
+        province: "/" + req.body.province + "/i"
+
+    };
+    console.log('province: ', req.body.province);
     Homestay.find().exec((err, data) => {
         if (!err && data != '') {
 
-            res.render('listHomestay', {title: 'Travelie - List homestays', feature_homestay: data});
+            res.render('listHomestay', {
+                title: 'Travelie - List homestays',
+                feature_homestay: data,
+                other_homestay: data
+            });
         }
         else
             console.log("Can not get document!!!");
