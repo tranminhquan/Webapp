@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/travelbooking');
 const Schema = mongoose.Schema;
 
 const homestaySchema = new Schema({
