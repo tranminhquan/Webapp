@@ -10310,3 +10310,17 @@ textarea.form-control {
 }
 
 /*even_odd*/
+/*div.text-lg-even_odd p:nth-child(odd){*/
+/*background-color: #0c5460;*/
+/*}*/
+/*div.text-lg-even_odd > p:nth-child(even){*/
+/*background-color: #0b0b0b;*/
+/*}*/
+
+/*.col-even_odd :nth-child(odd){*/
+/*}*/
+/*.col-even_odd :nth-child(even){*/
+/*-webkit-box-ordinal-group: 0;*/
+/*-ms-flex-order: -1;*/
+/*order: -1;*/
+/*}*/
