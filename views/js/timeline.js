@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
             timelineComponents['eventsContent'] = timeline.children('.events-content');
 
             //assign a left postion to the single events along the timeline
-            setDatePosition(timelineComponents, 100);
+            setDatePosition(timelineComponents, 130);
             //assign a width to the timeline
             var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
             //the timeline has been initialize - show it
@@ -129,7 +129,7 @@ jQuery(document).ready(function ($) {
 
     function setDatePosition(timelineComponents, min) {
         for (i = 0; i < timelineComponents['timelineDates'].length; i++) {
-            var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
+            var distance = daydiff(timelineComponents['timelineDates'][1], timelineComponents['timelineDates'][i]),
                 distanceNorm = Math.round(distance / timelineComponents['eventsMinLapse']) + 2;
             timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm * min + 'px');
         }
