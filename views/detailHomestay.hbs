@@ -187,83 +187,37 @@
                             <!-- OVERVIEW -->
                             <div class="tab-pane fade active show" id="overview">
                                 <div class="product-detail_amenities">
-                                    <p>Located in the heart of Aspen with a unique blend of contemporary luxury and
-                                        historic heritage, deluxe accommodations, superb amenities, genuine hospitality
-                                        and dedicated service for an elevated experience in the Rocky Mountains.</p>
-                                    <div class="row">
-                                        <div class="col-xs-6 col-lg-4">
-                                            <h6>LIVING ROOM</h6>
-                                            <ul>
-                                                <li>Oversized work desk</li>
-                                                <li>Hairdryer</li>
-                                                <li>Iron/ironing board upon request</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-6 col-lg-4">
-                                            <h6>KITCHEN ROOM</h6>
-                                            <ul>
-                                                <li>AM/FM clock radio</li>
-                                                <li>Voicemail</li>
-                                                <li>High-speed Internet access</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-6 col-lg-4">
-                                            <h6>balcony</h6>
-                                            <ul>
-                                                <li>AM/FM clock radio</li>
-                                                <li>Voicemail</li>
-                                                <li>High-speed Internet access</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-6 col-lg-4">
-                                            <h6>bedroom</h6>
-                                            <ul>
-                                                <li>Coffee maker</li>
-                                                <li>25 inch or larger TV</li>
-                                                <li>Cable/satellite TV channels</li>
-                                                <li>AM/FM clock radio</li>
-                                                <li>Voicemail</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-6 col-lg-4">
-                                            <h6>bathroom</h6>
-                                            <ul>
-                                                <li>Dataport</li>
-                                                <li>Phone access fees waived</li>
-                                                <li>24-hour Concierge service</li>
-                                                <li>Private concierge</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-xs-6 col-lg-4">
-                                            <h6>Oversized work desk</h6>
-                                            <ul>
-                                                <li>Dataport</li>
-                                                <li>Phone access fees waived</li>
-                                                <li>24-hour Concierge service</li>
-                                                <li>Private concierge</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <ul>
+                                        {{#each homestay.overview}}
+                                            <li>  {{this}}</li>
+                                        {{/each}}
+                                    </ul>
                                 </div>
                             </div>
                             <!-- END / OVERVIEW -->
                             <!-- TOUR -->
                             <div class="tab-pane fade" id="tour">
                                 <div class="product-detail_overview">
+                                    <div class="single-slider owl-carousel">
+                                        {{#each homestay.tour.images}}
+                                            <div class="item">
+                                                <div class="hotel-img" style="background-image: url({{this}});">
+                                                </div>
+                                            </div>
+                                        {{/each}}
+                                    </div>
                                     <section class="cd-horizontal-timeline">
                                         <div class="timeline">
+
                                             <div class="events-wrapper">
                                                 <div class="events">
                                                     <ol>
                                                         <li><a href="#0" data-date="16/01/2014" class="selected">Day
                                                             1</a></li>
-                                                        <li><a href="#0" data-date="28/02/2014">Day 2</a></li>
-                                                        <li><a href="#0" data-date="20/04/2014">Day 3</a></li>
-                                                        <li><a href="#0" data-date="20/05/2014">Day 4</a></li>
-                                                        <li><a href="#0" data-date="09/07/2014">Day 5</a></li>
-                                                        <li><a href="#0" data-date="30/08/2014">Day 6</a></li>
-                                                        <li><a href="#0" data-date="15/09/2014">Day 7</a></li>
-                                                        <li><a href="#0" data-date="01/11/2014">Day 8</a></li>
+                                                        <li><a href="#0" data-date="16/02/2014">Day 2</a></li>
+                                                        <li><a href="#0" data-date="16/03/2014">Day 3</a></li>
+                                                        <li><a href="#0" data-date="16/04/2014">Day 4</a></li>
+
                                                     </ol>
 
                                                     <span class="filling-line" aria-hidden="true"></span>
@@ -382,84 +336,24 @@
                             <!-- FOOD -->
                             <div class="tab-pane fade" id="food">
                                 <div class="product-detail_overview">
-                                    <!--Food One Row-->
-                                    <div class="row justify-content-center no-gutters mb-5">
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid" src="https://www.incimages.com/uploaded_files/image/970x450/getty_945685712_2000133420009280406_353733.jpg" alt="">
-                                        </div>
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <div class="text-center h-100 project">
-                                                <div class="d-flex h-100">
-                                                    <div class="project-text w-100 my-auto text-center text-lg-left">
-                                                        <h4 class="text pl-3">Kafein</h4>
-                                                        <p class="mb-0 text-50 pl-3">Great solution in café management.
-                                                            With Kefein, everything becomes too easy to manage!</p>
+                                    {{#each homestay.food}}
+                                        <div class="row justify-content-center no-gutters mb-5">
+                                            <!--<div class="col-lg-6">-->
+                                            <div class="col-sm-6">
+                                                <img class="img-fluid" src="{{images}}" alt="">
+                                            </div>
+                                            <!--<div class="col-lg-6">-->
+                                            <div class="col-sm-6">
+                                                <div class="text-center h-100 project">
+                                                    <div class="d-flex h-100">
+                                                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                                                            <p class="mb-0 text-50 pl-3">{{description}}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- Food Two Row -->
-                                    <div class="row justify-content-center no-gutters mb-5">
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid" src="https://ak0.picdn.net/shutterstock/videos/5585180/thumb/1.jpg" alt="">
-                                        </div>
-                                        <!--<div class="col-lg-6 order-lg-first">-->
-                                        <div class="col-sm-6 order-lg-first">
-                                            <div class="text-center h-100 project">
-                                                <div class="d-flex h-100">
-                                                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                                                        <h4 class="text pr-3">Hypershift</h4>
-                                                        <p class="mb-0 text-50 pr-3">Looking for a solution online
-                                                            meeting? Hypershift totally supports real-time chat, active
-                                                            board, presentation and task management</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Food Three Row -->
-                                    <div class="row justify-content-center no-gutters mb-5">
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid" src="https://www.incimages.com/uploaded_files/image/970x450/getty_945685712_2000133420009280406_353733.jpg" alt="">
-                                        </div>
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <div class="text-center h-100 project">
-                                                <div class="d-flex h-100">
-                                                    <div class="project-text w-100 my-auto text-center text-lg-left">
-                                                        <h4 class="text pl-3">Kafein</h4>
-                                                        <p class="mb-0 text-50 pl-3">Great solution in café management.
-                                                            With Kefein, everything becomes too easy to manage!</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Food Four Row -->
-                                    <div class="row justify-content-center no-gutters mb-5">
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid" src="https://ak0.picdn.net/shutterstock/videos/5585180/thumb/1.jpg" alt="">
-                                        </div>
-                                        <!--<div class="col-lg-6 order-lg-first">-->
-                                        <div class="col-sm-6 order-lg-first">
-                                            <div class="text-center h-100 project">
-                                                <div class="d-flex h-100">
-                                                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                                                        <h4 class="text pr-3">Hypershift</h4>
-                                                        <p class="mb-0 text-50 pr-3">Looking for a solution online
-                                                            meeting? Hypershift totally supports real-time chat, active
-                                                            board, presentation and task management</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{/each}}
                                 </div>
                             </div>
                             <!-- END / PACKAGE -->
@@ -467,30 +361,11 @@
                             <div class="tab-pane fade" id="rules">
                                 <div class="tab-pane fade active show" id="overview">
                                     <div class="product-detail_overview">
-                                        <h5 class="text-uppercase">de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h5>
-                                        <p>Located in the heart of Aspen with a unique blend of contemporary luxury and
-                                            historic heritage, deluxe accommodations, superb amenities, genuine
-                                            hospitality
-                                            and dedicated service for an elevated experience in the Rocky Mountains.</p>
-                                        <div class="row">
-                                            <div class="col-xs-6 col-md-4">
-                                                <h6>SPECIAL ROOM</h6>
-                                                <ul>
-                                                    <li>Max: 4 Person(s)</li>
-                                                    <li>Size: 35 m2 / 376 ft2</li>
-                                                    <li>View: Ocen</li>
-                                                    <li>Bed: King-size or twin beds</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-xs-6 col-md-4">
-                                                <h6>SERVICE ROOM</h6>
-                                                <ul>
-                                                    <li>Oversized work desk</li>
-                                                    <li>Hairdryer</li>
-                                                    <li>Iron/ironing board upon request</li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        <ul>
+                                            {{#each homestay.rule.description}}
+                                                <li><i class="fas fa-exclamation"></i>  {{this}}</li>
+                                            {{/each}}
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -822,47 +697,54 @@
             <h4 class="mb-4">Review &amp; Ratings</h4>
             <div class="row">
                 <div class="col-md-6">
-                    <form class="star-rating" method="post">
+                    <form class="star-rating" action="/detailHomestay/rating" method="post">
                         <div class="form-check">
-                            <input class="form-check-input" id="exampleCheck1" type="checkbox">
+                            <input class="form-check-input" name="rating" type="radio">
                             <label class="form-check-label" for="exampleCheck1">
                                 <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> 100 Ratings</span>
+                                        class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
                                 </p>
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" id="exampleCheck1" type="checkbox">
+                            <input class="form-check-input" name="rating" type="radio">
                             <label class="form-check-label" for="exampleCheck1">
                                 <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i> 30 Ratings</span>
+                                        class="icon-star"></i><i class="icon-star"></i><i
+                                        class="icon-star-o"></i></span>
                                 </p>
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" id="exampleCheck1" type="checkbox">
+                            <input class="form-check-input" name="rating" type="radio">
                             <label class="form-check-label" for="exampleCheck1">
                                 <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 5 Ratings</span>
+                                        class="icon-star"></i><i class="icon-star-o"></i><i
+                                        class="icon-star-o"></i></span>
                                 </p>
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" id="exampleCheck1" type="checkbox">
+                            <input class="form-check-input" name="rating" type="radio">
                             <label class="form-check-label" for="exampleCheck1">
                                 <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span>
+                                        class="icon-star-o"></i><i class="icon-star-o"></i><i
+                                        class="icon-star-o"></i></span>
                                 </p>
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" id="exampleCheck1" type="checkbox">
+                            <input class="form-check-input" name="rating" type="radio">
                             <label class="form-check-label" for="exampleCheck1">
                                 <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i
-                                        class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span>
+                                        class="icon-star-o"></i><i class="icon-star-o"></i><i
+                                        class="icon-star-o"></i></span>
                                 </p>
                             </label>
                         </div>
+                        <p>
+                            <button class="btn btn-primary agileinfo_primary submit" type="submit">Rate</button>
+                        </p>
                     </form>
                 </div>
             </div>
@@ -962,122 +844,34 @@
         </div>
 
         <div class="pt-5 mt-5">
-            <h3 class="mb-5">6 Comments</h3>
+            <h3 class="mb-5">{{nb_cmt}} Comments</h3>
             <ul class="comment-list">
-                <li class="comment">
-                    <div class="vcard bio">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                    </div>
-                    <div class="comment-body">
-                        <h3>John Doe</h3>
-                        <div class="meta">June 27, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                            necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste
-                            iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply">Reply</a></p>
-                    </div>
-                </li>
-
-                <li class="comment">
-                    <div class="vcard bio">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                    </div>
-                    <div class="comment-body">
-                        <h3>John Doe</h3>
-                        <div class="meta">June 27, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                            necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste
-                            iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply">Reply</a></p>
-                    </div>
-
-                    <ul class="children">
-                        <li class="comment">
-                            <div class="vcard bio">
-                                <img src="images/person_1.jpg" alt="Image placeholder">
-                            </div>
-                            <div class="comment-body">
-                                <h3>John Doe</h3>
-                                <div class="meta">June 27, 2018 at 2:21pm</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                                    necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente
-                                    iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                <p><a href="#" class="reply">Reply</a></p>
-                            </div>
-
-
-                            <ul class="children">
-                                <li class="comment">
-                                    <div class="vcard bio">
-                                        <img src="images/person_1.jpg" alt="Image placeholder">
-                                    </div>
-                                    <div class="comment-body">
-                                        <h3>John Doe</h3>
-                                        <div class="meta">June 27, 2018 at 2:21pm</div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem
-                                            laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe
-                                            enim sapiente iste iure! Quam voluptas earum impedit necessitatibus,
-                                            nihil?</p>
-                                        <p><a href="#" class="reply">Reply</a></p>
-                                    </div>
-
-                                    <ul class="children">
-                                        <li class="comment">
-                                            <div class="vcard bio">
-                                                <img src="images/person_1.jpg" alt="Image placeholder">
-                                            </div>
-                                            <div class="comment-body">
-                                                <h3>John Doe</h3>
-                                                <div class="meta">June 27, 2018 at 2:21pm</div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
-                                                    quidem laborum necessitatibus, ipsam impedit vitae autem, eum
-                                                    officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum
-                                                    impedit necessitatibus, nihil?</p>
-                                                <p><a href="#" class="reply">Reply</a></p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="comment">
-                    <div class="vcard bio">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                    </div>
-                    <div class="comment-body">
-                        <h3>John Doe</h3>
-                        <div class="meta">June 27, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                            necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste
-                            iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply">Reply</a></p>
-                    </div>
-                </li>
+                {{#each comments}}
+                    <li class="comment">
+                        <div class="vcard bio">
+                            <img src={{image}} alt="Image placeholder">
+                        </div>
+                        <div class="comment-body">
+                            <h3>{{name}}</h3>
+                            <div class="meta">{{time}}</div>
+                            <p>{{content}}</p>
+                        </div>
+                    </li>
+                {{/each}}
             </ul>
             <!-- END comment-list -->
 
             <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
-                <form action="#" class="p-5 bg-light">
+                <form action="/detailHomestay/submit-comment?id={{homestay._id}}" class="p-5 bg-light" method="post">
                     <div class="form-group">
                         <label for="name">Name *</label>
-                        <input type="text" class="form-control" id="name" required="">
+                        <input type="text" class="form-control" name="name" required="">
                     </div>
-                    <!--<div class="form-group">-->
-                        <!--<label for="email">Email *</label>-->
-                        <!--<input type="email" class="form-control" id="email">-->
-                    <!--</div>-->
-                    <!--<div class="form-group">-->
-                        <!--<label for="website">Website</label>-->
-                        <!--<input type="url" class="form-control" id="website">-->
-                    <!--</div>-->
 
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea name="" id="message" cols="30" rows="10" class="form-control" required=""></textarea>
+                        <textarea name="content" cols="30" rows="10" class="form-control" required=""></textarea>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
