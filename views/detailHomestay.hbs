@@ -53,7 +53,7 @@
                 <li class="nav-item active"><a class="nav-link" href="listHomestay">Homestays</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a class="nav-link" href="contact.html"><span>Find homestay</span></a></li>
+                <li class="nav-item cta"><a class="nav-link" href="search"><span>Find homestay</span></a></li>
             </ul>
         </div>
     </div>
@@ -152,7 +152,7 @@
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
                                        style="font-size:18px; vertical-align: middle;">access_time</i>
-                                    {{homestay.time_start}} - {{homestay.time_end}}
+                                    {{homestay.time_start}}:00 - {{homestay.time_end}}:00
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
@@ -486,11 +486,11 @@
         <div class="row">
         <div class="col-md-4">
         <div class="destination">
-        <a href="hotel-single.html" class="img img-2" style="background-image: url(images/room-4.jpg);"></a>
+        <a href="detailHomestay" class="img img-2" style="background-image: url(images/room-4.jpg);"></a>
         <div class="text p-3">
         <div class="d-flex">
         <div class="one">
-        <h3><a href="hotel-single.html">Homestay, Dalat</a></h3>
+        <h3><a href="detailHomestay">Homestay, Dalat</a></h3>
         <p class="rate">
         <i class="icon-star"></i>
         <i class="icon-star"></i>
@@ -515,11 +515,11 @@
         </div>
         <div class="col-md-4">
         <div class="destination">
-        <a href="hotel-single.html" class="img img-2" style="background-image: url(images/room-5.jpg);"></a>
+        <a href="detailHomestay" class="img img-2" style="background-image: url(images/room-5.jpg);"></a>
         <div class="text p-3">
         <div class="d-flex">
         <div class="one">
-        <h3><a href="hotel-single.html">Homestay, Dalat</a></h3>
+        <h3><a href="detailHomestay">Homestay, Dalat</a></h3>
         <p class="rate">
         <i class="icon-star"></i>
         <i class="icon-star"></i>
@@ -544,11 +544,11 @@
         </div>
         <div class="col-md-4">
         <div class="destination">
-        <a href="hotel-single.html" class="img img-2" style="background-image: url(images/room-6.jpg);"></a>
+        <a href="detailHomestay" class="img img-2" style="background-image: url(images/room-6.jpg);"></a>
         <div class="text p-3">
         <div class="d-flex">
         <div class="one">
-        <h3><a href="hotel-single.html">Homestay, Dalat</a></h3>
+        <h3><a href="detailHomestay">Homestay, Dalat</a></h3>
         <p class="rate">
         <i class="icon-star"></i>
         <i class="icon-star"></i>
@@ -810,10 +810,68 @@
         </div>-->
     </div>
 
+    <!-- Button trigger modal -->
     <div class="zoom">
-        <span class="zoom-fab zoom-btn-large" id="zoomBtn">
+        <span class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#exampleModal">
             <i class="material-icons" style="vertical-align: middle;">call</i>
         </span>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Booking Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="wthree_input">
+                            <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
+                            <input class="form-control" id="Name" name="Name" placeholder="Name" required=""
+                                   type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="wthree_input">
+                            <i aria-hidden="true" class="material-icons" style="font-size:22px;">call</i>
+                            <input class="form-control" id="Phone" name="Phone" placeholder="Phone" required=""
+                                   type="number"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="wthree_input">
+                            <i aria-hidden="true" class="fas fa-id-card" style="font-size:20px;"></i>
+                            <input class="form-control" id="ID card" name="ID card" placeholder="ID card" required=""
+                                   type="number"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="wthree_input">
+                            <i aria-hidden="true" class="material-icons" style="font-size:22px;">people</i>
+                            <input class="form-control" id="Guests" name="Guests" placeholder="Number of guests"
+                                   required=""
+                                   type="number"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="wthree_input">
+                            <i aria-hidden="true" class="fas fa-calendar-alt" style="font-size:20px;"></i>
+                            <input class="form-control" id="Checkin" name="Checkin" placeholder="Check in" required=""
+                                   type="date"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section> <!-- .section -->
 
