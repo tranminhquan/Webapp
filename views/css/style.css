@@ -9897,7 +9897,7 @@ textarea.form-control {
 .cd-horizontal-timeline .timeline {
   position: relative;
   height: 100px;
-  width: 90%;
+    width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -9909,15 +9909,15 @@ textarea.form-control {
   overflow: hidden;
 }
 
-.cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
-  /* these are used to create a shadow effect at the sides of the timeline */
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  height: 100%;
-  width: 20px;
-}
+/*.cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {*/
+/*!* these are used to create a shadow effect at the sides of the timeline *!*/
+/*content: '';*/
+/*position: absolute;*/
+/*z-index: 2;*/
+/*top: 0;*/
+/*height: 100%;*/
+/*width: 20px;*/
+/*}*/
 
 .cd-horizontal-timeline .events-wrapper::before {
   /*left: 0;*/
@@ -10174,45 +10174,45 @@ textarea.form-control {
   margin: 0 auto;
 }
 
-.cd-horizontal-timeline .events-content h2 {
-  font-weight: bold;
-  font-size: 2.6rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
+/*.cd-horizontal-timeline .events-content h2 {*/
+/*font-weight: bold;*/
+/*font-size: 2.6rem;*/
+/*font-weight: 700;*/
+/*line-height: 1.2;*/
+/*}*/
 
-.cd-horizontal-timeline .events-content em {
-  display: block;
-  font-style: italic;
-  margin: 10px auto;
-}
+/*.cd-horizontal-timeline .events-content em {*/
+/*display: block;*/
+/*font-style: italic;*/
+/*margin: 10px auto;*/
+/*}*/
 
 .cd-horizontal-timeline .events-content em::before {
   content: '- ';
 }
 
-.cd-horizontal-timeline .events-content p {
-  font-size: 1.4rem;
-  color: #959595;
-}
+/*.cd-horizontal-timeline .events-content p {*/
+/*font-size: 1.4rem;*/
+/*color: #959595;*/
+/*}*/
 
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
 }
 
-@media only screen and (min-width: 768px) {
-  .cd-horizontal-timeline .events-content h2 {
-    font-size: 7rem;
-  }
+/*@media only screen and (min-width: 768px) {*/
+/*.cd-horizontal-timeline .events-content h2 {*/
+/*font-size: 7rem;*/
+/*}*/
 
-  .cd-horizontal-timeline .events-content em {
-    font-size: 2rem;
-  }
+/*.cd-horizontal-timeline .events-content em {*/
+/*font-size: 2rem;*/
+/*}*/
 
-  .cd-horizontal-timeline .events-content p {
-    font-size: 1.8rem;
-  }
-}
+/*.cd-horizontal-timeline .events-content p {*/
+/*font-size: 1.8rem;*/
+/*}*/
+/*}*/
 
 @-webkit-keyframes cd-enter-right {
   0% {
