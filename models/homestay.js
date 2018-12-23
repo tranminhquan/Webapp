@@ -11,8 +11,8 @@ const homestaySchema = new Schema({
     name: String,
     address: String,
     distance: String,
-    nb_people: String,
-    np_days: String,
+    nb_people: Number,
+    np_days: Number,
     time_start: Number, // Activity
     time_end: Number,   // Activity
     rating: Number,
