@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const homestaySchema = new Schema({
-    feature_images: [String],
+    feature_images: [
+        {
+            images: String,
+            description: String
+        }
+    ],
     name: String,
     address: String,
     distance: String,
