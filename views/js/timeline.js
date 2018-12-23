@@ -19,22 +19,22 @@ jQuery(document).ready(function ($) {
             timelineComponents['eventsContent'] = timeline.children('.events-content');
 
             //assign a left postion to the single events along the timeline
-            setDatePosition(timelineComponents, eventsMinDistance);
+            setDatePosition(timelineComponents, 100);
             //assign a width to the timeline
             var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
             //the timeline has been initialize - show it
             timeline.addClass('loaded');
 
             //detect click on the next arrow
-            timelineComponents['timelineNavigation'].on('click', '.next', function (event) {
-                event.preventDefault();
-                updateSlide(timelineComponents, timelineTotWidth, 'next');
-            });
+            // timelineComponents['timelineNavigation'].on('click', '.next', function (event) {
+            //     event.preventDefault();
+            //     updateSlide(timelineComponents, timelineTotWidth, 'next');
+            // });
             //detect click on the prev arrow
-            timelineComponents['timelineNavigation'].on('click', '.prev', function (event) {
-                event.preventDefault();
-                updateSlide(timelineComponents, timelineTotWidth, 'prev');
-            });
+            // timelineComponents['timelineNavigation'].on('click', '.prev', function (event) {
+            //     event.preventDefault();
+            //     updateSlide(timelineComponents, timelineTotWidth, 'prev');
+            // });
             //detect click on the a single event - show new event content
             timelineComponents['eventsWrapper'].on('click', 'a', function (event) {
                 event.preventDefault();
@@ -139,7 +139,8 @@ jQuery(document).ready(function ($) {
         var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][timelineComponents['timelineDates'].length - 1]),
             timeSpanNorm = timeSpan / timelineComponents['eventsMinLapse'],
             timeSpanNorm = Math.round(timeSpanNorm) + 4,
-            totalWidth = timeSpanNorm * width;
+            // totalWidth = timeSpanNorm * width;
+            totalWidth = 20 * width;
         timelineComponents['eventsWrapper'].css('width', totalWidth + 'px');
         updateFilling(timelineComponents['timelineEvents'].eq(0), timelineComponents['fillingLine'], totalWidth);
 
