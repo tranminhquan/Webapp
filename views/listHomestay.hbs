@@ -65,6 +65,7 @@
                             <div class="col-md-9 ftco-animate text-left" data-scrollax=" properties: { translateY: '70%' }">
                                 <div class="row">
                                     <!--Left column-->
+                                    <a href="/detailHomestay?id={{_id}}">
                                     <div class="col-xs-6 col-md-6">
                                         <h1 class="mb-3 bread"
                                             data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
@@ -108,13 +109,13 @@
                                             <span><i class="icon-map-o"></i> {{distance}} </span>
                                         </p>
                                     </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         {{/each}}
     </div>
 </div>
@@ -207,7 +208,7 @@
                     {{#each other_homestay}}
                         <div class="col-md-4 ftco-animate">
                             <div class="destination">
-                                <a href="detailHomestay"
+                                <a href="/detailHomestay?id={{_id}}"
                                    class="img img-2 d-flex justify-content-center align-items-center"
                                    style="background-image: url({{feature_images.[0]}});">
                                     <div class="icon d-flex justify-content-center align-items-center">
@@ -217,7 +218,7 @@
                                 <div class="text p-3">
                                     <div class="d-flex">
                                         <div class="one">
-                                            <h3><a href="detailHomestay">{{name}}</a></h3>
+                                            <h3><a href="/detailHomestay?id={{_id}}">{{name}}</a></h3>
                                             <p class="rate">
                                                 <i class="icon-star"></i>
                                                 <i class="icon-star"></i>

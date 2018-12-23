@@ -5,22 +5,83 @@ var Homestay = require('../models/homestay');
 /* GET home page. */
 router.post('/', function (req, res, next) {
     // Homestay.find({'np_days' : 2}).exec((err, data) => {
-    filter = {
-        province: "/" + req.body.province + "/i"
+    // filter = {
+    //     $and:[
+    //         {address: "/" + req.body.province + "/i"},
+    //         {$or:[
+    //                 {},
+    //                 {},
+    //                 {}
+    //             ]}
+    //         ]
+    // };
+    var nb_people_filter;
+    if (req.body.nbtravellers_radio == "1")
+        nb_people_filter = {$gte: 1};
+    if (req.body.nbtravellers_radio == "2to4")
+        nb_people_filter = {$gte: 2};
+    if (req.body.nbtravellers_radio == "4to8")
+        nb_people_filter = {$gte: 4};
+    if (req.body.nbtravellers_radio == ">8")
+        nb_people_filter = {$gte: 8};
 
+    var np_day_filter;
+    if (req.body.duration_radio == "1")
+        np_day_filter = {$gte: 1};
+    if (req.body.duration_radio == "2to4")
+        np_day_filter = {$gte: 2};
+    if (req.body.duration_radio == "7" || req.body.duration_radio == ">7")
+        np_day_filter = {$gte: 7};
+
+    // var province = req.body.province;
+
+    strict_filter = {
+        address: req.body.province,
+        room_type: req.body.roomtype_radio,
+        location_type: req.body.locationtype_radio,
+        vacation_type: req.body.vacationtype_radio,
+        nb_people: nb_people_filter,
+        np_days: np_day_filter,
+        // cuisine: "/" + req.body.cuisine_radio + "/i",
+        // lifestyle: "/" + req.body.lifestyle_radio + "/i"
     };
-    console.log('province: ', req.body.province);
-    Homestay.find().exec((err, data) => {
-        if (!err && data != '') {
 
-            res.render('listHomestay', {
-                title: 'Travelie - List homestays',
-                feature_homestay: data,
-                other_homestay: data
-            });
+    console.log(strict_filter);
+
+    Homestay.find(strict_filter).exec((err, data) => {
+        if (!err && data !== '') {
+            console.log(data);
+            // if nothing match, then just find in that address
+            if (data.length == 0) {
+                Homestay.find({address: req.body.province}).exec((err3, data3) => {
+                    Homestay.find().exec((err2, data2) => {
+                        if (!err2 && data2 !== '') {
+                            res.render('listHomestay', {
+                                title: 'Travelie - List homestays',
+                                feature_homestay: data3,
+                                other_homestay: data2
+                            });
+                        }
+                        else
+                            console.log("Can not get document!!!");
+                    });
+                });
+            }
+            else {
+                Homestay.find().exec((err2, data2) => {
+                    if (!err2 && data2 !== '') {
+                        res.render('listHomestay', {
+                            title: 'Travelie - List homestays',
+                            feature_homestay: data,
+                            other_homestay: data2
+                        });
+                    }
+                    else
+                        console.log("Can not get document!!!");
+                });
+            }
         }
-        else
-            console.log("Can not get document!!!");
+
     });
 
 });
