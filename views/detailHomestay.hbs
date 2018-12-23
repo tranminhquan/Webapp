@@ -63,51 +63,23 @@
 <!--Header-->
 <div class="hero-wrap">
     <div class="single-slider owl-carousel">
-        <div class="item">
-            <div class="hotel-img" style="background-image: url(images/hotel-2.jpg);">
-                <div class="carousel-caption text-left">
-                    <div class="row p-0 slider-text js-fullheight align-items-end justify-content-left"
-                         data-scrollax-parent="true">
-                        <div class="col-md-9 ftco-animate text-left" data-scrollax=" properties: { translateY: '70%' }">
-                            <h1 class="mb-3 bread"
-                                data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
-                                Bedroom
-                            </h1>
+        {{#each homestay.feature_images}}
+            <div class="item">
+                <div class="hotel-img" style="background-image: url({{images}});">
+                    <div class="carousel-caption text-left">
+                        <div class="row p-0 slider-text js-fullheight align-items-end justify-content-left"
+                             data-scrollax-parent="true">
+                            <div class="col-md-9 ftco-animate text-left" data-scrollax=" properties: { translateY: '70%' }">
+                                <h1 class="mb-3 bread"
+                                    data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
+                                    {{description}}
+                                </h1>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <div class="hotel-img" style="background-image: url(images/hotel-3.jpg);">
-                <div class="carousel-caption text-left">
-                    <div class="row p-0 slider-text js-fullheight align-items-end justify-content-left"
-                         data-scrollax-parent="true">
-                        <div class="col-md-9 ftco-animate text-left" data-scrollax=" properties: { translateY: '70%' }">
-                            <h1 class="mb-3 bread"
-                                data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
-                                Bathroom
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="hotel-img" style="background-image: url(images/hotel-4.jpg);">
-                <div class="carousel-caption text-left">
-                    <div class="row p-0 slider-text js-fullheight align-items-end justify-content-left"
-                         data-scrollax-parent="true">
-                        <div class="col-md-9 ftco-animate text-left" data-scrollax=" properties: { translateY: '70%' }">
-                            <h1 class="mb-3 bread"
-                                data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
-                                Walkway
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
 </div>
 
@@ -115,9 +87,9 @@
 <section class="ftco-section ftco-degree-bg pt-0">
     <div class="container">
         <div class="col-md-12 hotel-single mt-0 mb-5 ftco-animate">
-            <h1 class="display-4">Hypershift</h1>
+            <h1 class="display-4">{{homestay.name}}</h1>
             <p class="rate mb-5">
-                <span class="loc"><a href="#"><i class="icon-my_location"></i> 69 Vo Van Ngan Street, Linh Trung Ward, Thu Duc District</a></span>
+                <span class="loc"><a href="#"><i class="icon-my_location"></i> {{homestay.address}} </a></span>
                 <span class="star">
     							<i class="icon-star"></i>
     							<i class="icon-star"></i>
@@ -132,7 +104,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="images/person_1.jpg"
+                            <img src={{homestay.owner.image}}
                                  class="w-100 rounded-circle p-4">
                         </div>
 
@@ -141,27 +113,36 @@
                                 <p class="p-1 pl-3 mt-2 mb-2">
                                     <i class="material-icons"
                                        style="font-size:24px; vertical-align: top;">person</i>
-                                    Dao Nguyen Quan
+                                    {{homestay.owner.name}}
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
                                        style="font-size:24px; vertical-align: text-bottom;">cake</i>
-                                    23/06/1997
+                                    {{homestay.owner.dob}}
                                 </p>
-                                <p class="p-1 pl-3 mb-2">
-                                    <i class="fas fa-transgender mr-2"
-                                       style="font-size:24px; vertical-align: top;"></i>
-                                    Male
-                                </p>
+                                {{#if homestay.ownner.gender}}
+                                    <p class="p-1 pl-3 mb-2">
+                                        <i class="fas fa-transgender mr-2"
+                                           style="font-size:24px; vertical-align: top;"></i>
+                                        Male
+                                    </p>
+                                {{else}}
+                                    <p class="p-1 pl-3 mb-2">
+                                        <i class="fas fa-transgender mr-2"
+                                           style="font-size:24px; vertical-align: top;"></i>
+                                        Female
+                                    </p>
+                                {{/if}}
+
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="fas fa-briefcase mr-2"
                                        style="font-size:18px; vertical-align: top;"></i>
-                                    Fisherman
+                                    {{homestay.owner.career}}
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons mr-1"
                                        style="font-size:20px; vertical-align: top;">call</i>
-                                    094 227 0708
+                                    {{homestay.owner.phone}}
                                 </p>
                             </div>
                         </div>
@@ -171,17 +152,17 @@
                                 <p class="p-1 pl-3 mt-2 mb-2">
                                     <i class="icon-map"
                                        style="font-size:18px; vertical-align: top;"></i>
-                                    0.5km from Noi Bai
+                                    {{homestay.distance}}
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
                                        style="font-size:18px; vertical-align: middle;">access_time</i>
-                                    8:00 - 23:00
+                                    {{homestay.time_start}} - {{homestay.time_end}}
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
                                        style="font-size:18px; vertical-align: middle;">people</i>
-                                    Only 1 person
+                                    {{homestay.np_people}}
                                 </p>
                             </div>
                         </div>
