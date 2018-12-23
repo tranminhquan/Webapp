@@ -10,6 +10,7 @@ const homestaySchema = new Schema({
     ],
     name: String,
     address: String,
+    full_address: String,
     distance: String,
     nb_people: Number,
     np_days: Number,
@@ -39,7 +40,6 @@ const homestaySchema = new Schema({
         description: [String]
     },
     video: String,
-    comment: [String],
     room_type: String,
     location_type: String,
     vacation_type: String,
