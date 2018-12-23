@@ -29,10 +29,12 @@ const homestaySchema = new Schema({
         images: [String],
         description: [String]
     },
-    food:{
-        images: [String],
-        description: [String]
-    },
+    food:[
+        {
+            images: String,
+            description: String
+        }
+    ],
     rule:{
         description: [String]
     },

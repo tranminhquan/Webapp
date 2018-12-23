@@ -382,84 +382,24 @@
                             <!-- FOOD -->
                             <div class="tab-pane fade" id="food">
                                 <div class="product-detail_overview">
-                                    <!--Food One Row-->
-                                    <div class="row justify-content-center no-gutters mb-5">
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid" src="https://www.incimages.com/uploaded_files/image/970x450/getty_945685712_2000133420009280406_353733.jpg" alt="">
-                                        </div>
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <div class="text-center h-100 project">
-                                                <div class="d-flex h-100">
-                                                    <div class="project-text w-100 my-auto text-center text-lg-left">
-                                                        <h4 class="text pl-3">Kafein</h4>
-                                                        <p class="mb-0 text-50 pl-3">Great solution in café management.
-                                                            With Kefein, everything becomes too easy to manage!</p>
+                                    {{#each homestay.food}}
+                                        <div class="row justify-content-center no-gutters mb-5">
+                                            <!--<div class="col-lg-6">-->
+                                            <div class="col-sm-6">
+                                                <img class="img-fluid" src="{{images}}" alt="">
+                                            </div>
+                                            <!--<div class="col-lg-6">-->
+                                            <div class="col-sm-6">
+                                                <div class="text-center h-100 project">
+                                                    <div class="d-flex h-100">
+                                                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                                                            <p class="mb-0 text-50 pl-3">{{description}}</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- Food Two Row -->
-                                    <div class="row justify-content-center no-gutters mb-5">
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid" src="https://ak0.picdn.net/shutterstock/videos/5585180/thumb/1.jpg" alt="">
-                                        </div>
-                                        <!--<div class="col-lg-6 order-lg-first">-->
-                                        <div class="col-sm-6 order-lg-first">
-                                            <div class="text-center h-100 project">
-                                                <div class="d-flex h-100">
-                                                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                                                        <h4 class="text pr-3">Hypershift</h4>
-                                                        <p class="mb-0 text-50 pr-3">Looking for a solution online
-                                                            meeting? Hypershift totally supports real-time chat, active
-                                                            board, presentation and task management</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Food Three Row -->
-                                    <div class="row justify-content-center no-gutters mb-5">
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid" src="https://www.incimages.com/uploaded_files/image/970x450/getty_945685712_2000133420009280406_353733.jpg" alt="">
-                                        </div>
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <div class="text-center h-100 project">
-                                                <div class="d-flex h-100">
-                                                    <div class="project-text w-100 my-auto text-center text-lg-left">
-                                                        <h4 class="text pl-3">Kafein</h4>
-                                                        <p class="mb-0 text-50 pl-3">Great solution in café management.
-                                                            With Kefein, everything becomes too easy to manage!</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Food Four Row -->
-                                    <div class="row justify-content-center no-gutters mb-5">
-                                        <!--<div class="col-lg-6">-->
-                                        <div class="col-sm-6">
-                                            <img class="img-fluid" src="https://ak0.picdn.net/shutterstock/videos/5585180/thumb/1.jpg" alt="">
-                                        </div>
-                                        <!--<div class="col-lg-6 order-lg-first">-->
-                                        <div class="col-sm-6 order-lg-first">
-                                            <div class="text-center h-100 project">
-                                                <div class="d-flex h-100">
-                                                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                                                        <h4 class="text pr-3">Hypershift</h4>
-                                                        <p class="mb-0 text-50 pr-3">Looking for a solution online
-                                                            meeting? Hypershift totally supports real-time chat, active
-                                                            board, presentation and task management</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{/each}}
                                 </div>
                             </div>
                             <!-- END / PACKAGE -->
