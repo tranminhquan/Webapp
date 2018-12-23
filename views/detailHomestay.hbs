@@ -691,7 +691,7 @@
 
         </div>
 
-        <div class="pt-5 mt-5">
+        <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">{{nb_cmt}} Comments</h4>
             <ul class="comment-list">
                 {{#each comments}}
@@ -707,9 +707,10 @@
                     </li>
                 {{/each}}
             </ul>
+        </div>
             <!-- END comment-list -->
 
-            <div class="comment-form-wrap pt-5">
+        <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
                 <h4 class="mb-4">Leave a comment</h4>
                 <form action="/detailHomestay/submit-comment?id={{homestay._id}}" class="p-5 bg-light" method="post">
                     <div class="form-group">
@@ -724,10 +725,8 @@
                     <div class="form-group">
                         <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
                     </div>
-
                 </form>
             </div>
-        </div>
 
         <!--<div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">Other Homestays</h4>
