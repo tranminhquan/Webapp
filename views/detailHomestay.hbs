@@ -99,14 +99,14 @@
         <div class="col-md-12 hotel-single mt-0 mb-5 ftco-animate">
             <h1 class="display-4">{{homestay.name}}</h1>
             <p class="rate mb-5">
-                <span class="loc"><a href="#"><i class="icon-my_location"></i> {{homestay.address}} </a></span>
+                <span class="loc"><a target="_blank"
+                                     href="https://www.google.com/maps/search/?api=1&query={{homestay.full_address}}"><i
+                        class="icon-my_location"></i> {{homestay.full_address}} </span></a>
                 <span class="star">
-    							<i class="icon-star"></i>
-    							<i class="icon-star"></i>
-    							<i class="icon-star"></i>
-    							<i class="icon-star"></i>
-    							<i class="icon-star-o"></i>
-    							8 Rating</span>
+                    {{#each stars}}
+                        <i class={{this}}></i>
+                    {{/each}}
+                </span>
             </p>
 
             <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
@@ -222,12 +222,9 @@
                                             <div class="events-wrapper">
                                                 <div class="events">
                                                     <ol>
-                                                        <li><a href="#0" data-date="16/01/2014"
-                                                               class="selected">Day 1</a></li>
-                                                        <li><a href="#0" data-date="16/02/2014">Day 2</a></li>
-                                                        <li><a href="#0" data-date="16/03/2014">Day 3</a></li>
-                                                        <li><a href="#0" data-date="16/04/2014">Day 4</a></li>
-
+                                                        {{#each tours}}
+                                                            <li><a href="#0" data-date={{date}}>{{index}}</a></li>
+                                                        {{/each}}
                                                     </ol>
 
                                                     <span class="filling-line" aria-hidden="true"></span>
@@ -242,41 +239,16 @@
 
                                         <div class="events-content">
                                             <ol>
-                                                <li class="selected" data-date="16/01/2014">
-                                                    <h2>Horizontal Timeline</h2>
+                                                {{#each tours}}
+                                                    <li data-date={{date}}>
+                                                        <!--<h2>Horizontal Timeline</h2>-->
                                                     <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-                                                        praesentium officia, fugit recusandae ipsa, quia velit nulla
-                                                        adipisci? Consequuntur aspernatur at, eaque hic repellendus sit
-                                                        dicta consequatur quae, ut harum ipsam molestias maxime non nisi
-                                                        reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                                                        quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                                                        {{description}}
                                                     </p>
                                                 </li>
+                                                {{/each}}
 
-                                                <li data-date="16/02/2014">
-                                                    <h2>Event title here</h2>
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-                                                        praesentium officia, fugit recusandae ipsa, quia velit nulla
-                                                        adipisci? Consequuntur aspernatur at, eaque hic repellendus sit
-                                                        dicta consequatur quae, ut harum ipsam molestias maxime non nisi
-                                                        reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                                                        quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                                                    </p>
-                                                </li>
 
-                                                <li data-date="16/03/2014">
-                                                    <h2>Event title here</h2>
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-                                                        praesentium officia, fugit recusandae ipsa, quia velit nulla
-                                                        adipisci? Consequuntur aspernatur at, eaque hic repellendus sit
-                                                        dicta consequatur quae, ut harum ipsam molestias maxime non nisi
-                                                        reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                                                        quibusdam quisquam, quae, temporibus dolores porro doloribus.
-                                                    </p>
-                                                </li>
                                             </ol>
                                         </div> <!-- .events-content -->
                                     </section>
@@ -842,31 +814,32 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <form action="/detailHomestay/booking?id={{homestay.name}}" method="get">
                     <div class="form-group">
                         <div class="wthree_input">
                             <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                            <input class="form-control" id="Name" name="Name" placeholder="Name" required=""
+                            <input class="form-control" id="Name" name="name" placeholder="Name" required=""
                                    type="text"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="wthree_input">
                             <i aria-hidden="true" class="material-icons" style="font-size:22px;">call</i>
-                            <input class="form-control" id="Phone" name="Phone" placeholder="Phone" required=""
+                            <input class="form-control" id="Phone" name="phone" placeholder="Phone" required=""
                                    type="number"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="wthree_input">
                             <i aria-hidden="true" class="fas fa-id-card" style="font-size:20px;"></i>
-                            <input class="form-control" id="ID card" name="ID card" placeholder="ID card" required=""
+                            <input class="form-control" id="ID card" name="id_card" placeholder="ID card" required=""
                                    type="number"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="wthree_input">
                             <i aria-hidden="true" class="material-icons" style="font-size:22px;">people</i>
-                            <input class="form-control" id="Guests" name="Guests" placeholder="Number of guests"
+                            <input class="form-control" id="Guests" name="nb_people" placeholder="Number of guests"
                                    required=""
                                    type="number"/>
                         </div>
@@ -874,13 +847,17 @@
                     <div class="form-group">
                         <div class="wthree_input">
                             <i aria-hidden="true" class="fas fa-calendar-alt" style="font-size:20px;"></i>
-                            <input type="text" id="checkin_date" class="form-control" placeholder="Check in">
+                            <input class="form-control" id="Checkin" name="checkin" placeholder="Check in" required=""
+                                   type="date"/>
                         </div>
                     </div>
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" value="Submit" class="btn py-3 px-4 btn-primary">
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+
                 </div>
             </div>
         </div>
