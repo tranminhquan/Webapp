@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var Homestay = require('../models/homestay');
 var Comment = require('../models/comment');
+var Booking = require('../models/booking');
+var current_id; //current homestay id
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,12 +11,28 @@ router.get('/', function(req, res, next) {
         if (!err && data !== '') {
             console.log('detail homestay json: ', data);
 
-            var days_arr = [];
+            var tour_arr = [];
             var temp = 1;
 
-            for (var i = 0; i < data.np_days; i++) {
-                days_arr.push({index: "Day " + (i + 1), date: temp + "/" + 1 + "/2018"});
-                temp += 5;
+            current_id = data._id;
+
+            // For load the day
+            for (var i = 0; i < data.tour.description.length; i++) {
+                tour_arr.push({
+                    index: "Day " + (i + 1),
+                    date: 1 + "/" + temp + "/2018",
+                    description: data.tour.description[i]
+                });
+                temp += 1;
+            }
+
+            console.log(tour_arr);
+
+            // set star
+            var star_arr = [];
+            var indice = 0;
+            for (indice; indice < data.rating; indice++) {
+                star_arr.push("icon-star");
             }
 
             //Load comment
@@ -25,7 +43,8 @@ router.get('/', function(req, res, next) {
                         homestay: data,
                         comments: data2,
                         nb_cmt: data2.length,
-                        days: days_arr
+                        stars: star_arr,
+                        tours: tour_arr
                     });
                 }
             });
@@ -37,9 +56,23 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post('/booking', function(req, res, next){
+router.get('/booking', function (req, res, next) {
     try{
-        res.render('booking', {title: 'Travelie - Booking'});
+        booking = new Booking();
+        booking.homestay_id = current_id;
+        booking.name = req.query.name;
+        booking.phone = req.query.phone;
+        booking.id_card = req.query.id_card;
+        booking.nb_people = req.query.nb_people;
+        booking.date = req.query.checkin;
+
+        console.log('id: ', current_id);
+
+        booking.save(function (err) {
+            if (err)
+                console.log('Error when saving new comment');
+            res.redirect('/detailHomestay?id=' + current_id);
+        });
     } catch(error){
 
     }
