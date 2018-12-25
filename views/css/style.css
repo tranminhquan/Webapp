@@ -10310,10 +10310,7 @@ textarea.form-control {
 }
 
 /*even_odd*/
-/*div.text-lg-even_odd p:nth-child(odd){*/
-/*background-color: #0c5460;*/
-/*}*/
-/*div.text-lg-even_odd > p:nth-child(even){*/
+/*#even_odd :nth-child(even) :first-child : first:nth-child(2){*/
 /*background-color: #0b0b0b;*/
 /*}*/
 
