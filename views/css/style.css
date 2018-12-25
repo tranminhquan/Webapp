@@ -8098,7 +8098,13 @@ h1, h2, h3, h4, h5,
     border-color: #000000; }
 
 textarea.form-control {
-  height: inherit !important; }
+    height: inherit !important;
+    font-size: 14px
+}
+
+input.form-control {
+    font-size: 14px
+}
 
 .ftco-vh-100 {
   height: 100vh; }
