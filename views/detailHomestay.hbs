@@ -79,7 +79,8 @@
                     <div class="carousel-caption text-left">
                         <div class="row p-0 slider-text js-fullheight align-items-end justify-content-left"
                              data-scrollax-parent="true">
-                            <div class="col-md-9 ftco-animate text-left" data-scrollax=" properties: { translateY: '70%' }">
+                            <div class="col-md-9 ftco-animate text-left"
+                                 data-scrollax=" properties: { translateY: '70%' }">
                                 <h2 class="mb-3 bread text-white"
                                     data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
                                     {{description}}
@@ -242,10 +243,10 @@
                                                 {{#each tours}}
                                                     <li data-date={{date}}>
                                                         <!--<h2>Horizontal Timeline</h2>-->
-                                                    <p>
-                                                        {{description}}
-                                                    </p>
-                                                </li>
+                                                        <p>
+                                                            {{description}}
+                                                        </p>
+                                                    </li>
                                                 {{/each}}
 
 
@@ -454,10 +455,10 @@
         <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">Take A Tour</h4>
             <!--<div class="block-16">-->
-                <!--<figure class="text-center">-->
-                    <!--<img alt="Image placeholder" class="img-fluid" src="images/hotel-6.jpg">-->
-                    <!--<a class="play-button popup-vimeo" href="{{homestay.video}}"><span class="icon-play"></span></a>-->
-                <!--</figure>-->
+            <!--<figure class="text-center">-->
+            <!--<img alt="Image placeholder" class="img-fluid" src="images/hotel-6.jpg">-->
+            <!--<a class="play-button popup-vimeo" href="{{homestay.video}}"><span class="icon-play"></span></a>-->
+            <!--</figure>-->
             <!--</div>-->
             <!-- 16:9 aspect ratio -->
             <div class="embed-responsive embed-responsive-16by9">
@@ -691,27 +692,31 @@
                 {{/each}}
             </ul>
         </div>
-            <!-- END comment-list -->
+        <!-- END comment-list -->
 
         <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">Leave A Comment</h4>
 
             <form action="/detailHomestay/submit-comment?id={{homestay._id}}" class="p-5 bg-light" method="post">
             <div class="rate1" style="float: none; margin: 0 auto;"></div>
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" class="form-control" name="name" required="">
-                    </div>
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" class="form-control" name="name" required="">
+            </div>
 
             <label for="message">Comment *</label>
-            <div class="row ml-0">
-                <textarea name="content" cols="127" rows="2" class="col-sm-form-control mr-3" required=""></textarea>
-                <button type="submit" class="btn py-3 px-1 btn-primary">
-                    <i class="col-sm material-icons" style="font-size: 20px; vertical-align: middle;">send</i>
-                </button>
+            <div class="row">
+                <div class="col">
+                    <textarea name="content" rows="2" class="form-control mr-3" style="min-width: 100%;"
+                              required=""></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn py-3 px-1 btn-primary">
+                        <i class="col material-icons" style="font-size: 20px; vertical-align: middle;">send</i>
+                    </button>
+                </div>
             </div>
-                </form>
-            </div>
+        </div>
 
         <!--<div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">Other Homestays</h4>
