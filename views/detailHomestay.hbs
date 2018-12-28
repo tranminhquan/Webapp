@@ -99,10 +99,22 @@
     <div class="container">
         <div class="col-md-12 hotel-single mt-0 mb-5 ftco-animate">
             <h1 class="display-4">{{homestay.name}}</h1>
+            <p class="rate">
+                <span class="loc">
+                <a target="_blank"
+                   href="https://www.google.com/maps/search/?api=1&query={{homestay.full_address}}">
+                <i class="icon-my_location"></i> {{homestay.full_address}}
+                </span>
+                <span>
+                    <i class="material-icons"
+                       style="font-size:24px; vertical-align: top;">motorcycle</i>
+                    <i class="material-icons"
+                       style="font-size:20px; vertical-align: top;">directions_car</i>
+                    <i class="material-icons"
+                       style="font-size:18px; vertical-align: top;">airplanemode_active</i>
+                </span>
+            </p>
             <p class="rate mb-5">
-                <span class="loc"><a target="_blank"
-                                     href="https://www.google.com/maps/search/?api=1&query={{homestay.full_address}}"><i
-                        class="icon-my_location"></i> {{homestay.full_address}} </span></a>
                 <span class="star">
                     {{#each stars}}
                         <i class={{this}}></i>
@@ -171,7 +183,7 @@
                                     {{homestay.nb_people}} persons
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
-                                    <i class="far fa-calendar-alt"
+                                    <i class="far fa-calendar-alt mr-1"
                                        style="font-size:18px; vertical-align: middle;"></i>
                                     {{homestay.np_days}} days
                                 </p>
@@ -190,7 +202,7 @@
                             <li><a data-toggle="tab" href="#tour">TOUR</a></li>
                             <li><a data-toggle="tab" href="#food">FOOD</a></li>
                             <li><a data-toggle="tab" href="#rules">RULES</a></li>
-                            <!--<li><a href="#calendar" data-toggle="tab">Calendar</a></li>-->
+                            <li><a data-toggle="tab" href="#calendar">CALENDAR</a></li>
                         </ul>
                     </div>
                     <div class="col-md-9">
@@ -295,15 +307,16 @@
                             </div>
                             <!-- END / RULES -->
                             <!-- CALENDAR -->
-                            <!--<div class="tab-pane fade" id="calendar">
+                            <div class="tab-pane fade" id="calendar">
                                 <div class="product-detail_calendar-wrap row">
                                     <div class="col-sm-6">
-                                        &lt;!&ndash; CALENDAR ITEM &ndash;&gt;
+                                        <!-- CALENDAR ITEM -->
                                         <div class="calendar_custom">
                                             <div class="calendar_title">
                                                 <span class="calendar_month">JUNE</span>
                                                 <span class="calendar_year">2017</span>
-                                                <a href="#" class="calendar_prev calendar_corner"><i class="ion-ios-arrow-thin-left"></i></a>
+                                                <a href="#" class="calendar_prev calendar_corner"><i
+                                                        class="ion-ios-arrow-thin-left"></i></a>
                                             </div>
                                             <table class="calendar_tabel">
                                                 <thead>
@@ -317,64 +330,129 @@
                                                     <th>Sa</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody><tr>
+                                                <tbody>
+                                                <tr>
                                                     <td></td>
                                                     <td class="apb-calendar_current-date">
-                                                        <a href="#"><small>1</small></a>
+                                                        <a href="#">
+                                                            <small>1</small>
+                                                        </a>
                                                     </td>
-                                                    <td><a href="#"><small>2</small></a></td>
-                                                    <td><a href="#"><small>3</small></a></td>
-                                                    <td><a href="#"><small>4</small></a></td>
-                                                    <td><a href="#"><small>5</small></a></td>
-                                                    <td><a href="#"><small>6</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>2</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>3</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>4</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>5</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>6</small>
+                                                    </a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#"><small>7</small></a></td>
-                                                    <td><a href="#"><small>8</small></a></td>
-                                                    <td><a href="#"><small>9</small></a></td>
-                                                    <td><a href="#"><small>10</small></a></td>
-                                                    <td class="apb-calendar_current-select"><a href="#"><small>11</small></a></td>
-                                                    <td class="apb-calendar_current-select"><a href="#"><small>12</small></a></td>
-                                                    <td><a href="#"><small>13</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>7</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>8</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>9</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>10</small>
+                                                    </a></td>
+                                                    <td class="apb-calendar_current-select"><a href="#">
+                                                        <small>11</small>
+                                                    </a></td>
+                                                    <td class="apb-calendar_current-select"><a href="#">
+                                                        <small>12</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>13</small>
+                                                    </a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#"><small>14</small></a></td>
-                                                    <td><a href="#"><small>15</small></a></td>
-                                                    <td class="not-available"><a href="#"><small>16</small></a></td>
-                                                    <td class="not-available"><a href="#"><small>17</small></a></td>
-                                                    <td><a href="#"><small>18</small></a></td>
-                                                    <td><a href="#"><small>19</small></a></td>
-                                                    <td><a href="#"><small>20</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>14</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>15</small>
+                                                    </a></td>
+                                                    <td class="not-available"><a href="#">
+                                                        <small>16</small>
+                                                    </a></td>
+                                                    <td class="not-available"><a href="#">
+                                                        <small>17</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>18</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>19</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>20</small>
+                                                    </a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#"><small>21</small></a></td>
-                                                    <td><a href="#"><small>22</small></a></td>
-                                                    <td><a href="#"><small>23</small></a></td>
-                                                    <td><a href="#"><small>24</small></a></td>
-                                                    <td><a href="#"><small>25</small></a></td>
-                                                    <td><a href="#"><small>26</small></a></td>
-                                                    <td><a href="#"><small>27</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>21</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>22</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>23</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>24</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>25</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>26</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>27</small>
+                                                    </a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#"><small>28</small></a></td>
-                                                    <td><a href="#"><small>29</small></a></td>
-                                                    <td><a href="#"><small>30</small></a></td>
-                                                    <td><a href="#"><small>31</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>28</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>29</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>30</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>31</small>
+                                                    </a></td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
-                                                </tbody></table>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                        &lt;!&ndash; END CALENDAR ITEM &ndash;&gt;
+                                        <!-- END CALENDAR ITEM -->
                                     </div>
                                     <div class="col-sm-6">
-                                        &lt;!&ndash; CALENDAR ITEM &ndash;&gt;
+                                        <!-- CALENDAR ITEM -->
                                         <div class="calendar_custom">
                                             <div class="calendar_title">
                                                 <span class="calendar_month">JUNE</span>
                                                 <span class="calendar_year">2017</span>
-                                                <a href="#" class="calendar_next calendar_corner"><i class="ion-ios-arrow-thin-right"></i></a>
+                                                <a href="#" class="calendar_next calendar_corner"><i
+                                                        class="ion-ios-arrow-thin-right"></i></a>
                                             </div>
                                             <table class="calendar_tabel">
                                                 <thead>
@@ -388,63 +466,127 @@
                                                     <th>Sa</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody><tr>
+                                                <tbody>
+                                                <tr>
                                                     <td></td>
                                                     <td class="apb-calendar_current-date">
-                                                        <a href="#"><small>1</small></a>
+                                                        <a href="#">
+                                                            <small>1</small>
+                                                        </a>
                                                     </td>
-                                                    <td><a href="#"><small>2</small></a></td>
-                                                    <td><a href="#"><small>3</small></a></td>
-                                                    <td><a href="#"><small>4</small></a></td>
-                                                    <td><a href="#"><small>5</small></a></td>
-                                                    <td><a href="#"><small>6</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>2</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>3</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>4</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>5</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>6</small>
+                                                    </a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#"><small>7</small></a></td>
-                                                    <td><a href="#"><small>8</small></a></td>
-                                                    <td><a href="#"><small>9</small></a></td>
-                                                    <td><a href="#"><small>10</small></a></td>
-                                                    <td class="apb-calendar_current-select"><a href="#"><small>11</small></a></td>
-                                                    <td class="apb-calendar_current-select"><a href="#"><small>12</small></a></td>
-                                                    <td><a href="#"><small>13</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>7</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>8</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>9</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>10</small>
+                                                    </a></td>
+                                                    <td class="apb-calendar_current-select"><a href="#">
+                                                        <small>11</small>
+                                                    </a></td>
+                                                    <td class="apb-calendar_current-select"><a href="#">
+                                                        <small>12</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>13</small>
+                                                    </a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#"><small>14</small></a></td>
-                                                    <td><a href="#"><small>15</small></a></td>
-                                                    <td class="not-available"><a href="#"><small>16</small></a></td>
-                                                    <td class="not-available"><a href="#"><small>17</small></a></td>
-                                                    <td><a href="#"><small>18</small></a></td>
-                                                    <td><a href="#"><small>19</small></a></td>
-                                                    <td><a href="#"><small>20</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>14</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>15</small>
+                                                    </a></td>
+                                                    <td class="not-available"><a href="#">
+                                                        <small>16</small>
+                                                    </a></td>
+                                                    <td class="not-available"><a href="#">
+                                                        <small>17</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>18</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>19</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>20</small>
+                                                    </a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#"><small>21</small></a></td>
-                                                    <td><a href="#"><small>22</small></a></td>
-                                                    <td><a href="#"><small>23</small></a></td>
-                                                    <td><a href="#"><small>24</small></a></td>
-                                                    <td><a href="#"><small>25</small></a></td>
-                                                    <td><a href="#"><small>26</small></a></td>
-                                                    <td><a href="#"><small>27</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>21</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>22</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>23</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>24</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>25</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>26</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>27</small>
+                                                    </a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="#"><small>28</small></a></td>
-                                                    <td><a href="#"><small>29</small></a></td>
-                                                    <td><a href="#"><small>30</small></a></td>
-                                                    <td><a href="#"><small>31</small></a></td>
+                                                    <td><a href="#">
+                                                        <small>28</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>29</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>30</small>
+                                                    </a></td>
+                                                    <td><a href="#">
+                                                        <small>31</small>
+                                                    </a></td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
-                                                </tbody></table>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                        &lt;!&ndash; END CALENDAR ITEM &ndash;&gt;
+                                        <!-- END CALENDAR ITEM -->
                                     </div>
                                     <div class="calendar_status text-center col-sm-12">
                                         <span>Available</span>
                                         <span class="not-available">Not Available</span>
                                     </div>
                                 </div>
-                            </div>-->
+                            </div>
                             <!-- END / CALENDAR -->
                         </div>
                     </div>
@@ -619,64 +761,8 @@
         </div>-->
         <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">Review &amp; Ratings</h4>
-            <!--<div class="row">
-                <div class="col-md-6">
-                    <form class="star-rating" action="/detailHomestay/rating" method="post">
-                        <div class="form-check">
-                            <input class="form-check-input" name="rating" type="radio">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
-                                </p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="rating" type="radio">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star-o"></i></span>
-                                </p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="rating" type="radio">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star"></i><i class="icon-star-o"></i><i
-                                        class="icon-star-o"></i></span>
-                                </p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="rating" type="radio">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-                                        class="icon-star-o"></i><i class="icon-star-o"></i><i
-                                        class="icon-star-o"></i></span>
-                                </p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="rating" type="radio">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i
-                                        class="icon-star-o"></i><i class="icon-star-o"></i><i
-                                        class="icon-star-o"></i></span>
-                                </p>
-                            </label>
-                        </div>
-                        <p>
-                            <button class="btn btn-primary agileinfo_primary submit" type="submit">Rate</button>
-                        </p>
-                    </form>
-                </div>
-            </div>-->
 
-        </div>
-
-        <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
-            <!--<h4 class="mb-4">{{nb_cmt}} Comments</h4>-->
+            <!-- comment-list -->
             <ul class="comment-list">
                 {{#each comments}}
                     <li class="comment">
@@ -718,7 +804,7 @@
             </div>
         </div>
 
-        <!--<div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
+        <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">Other Homestays</h4>
             <div class="row">
                 <div class="col-lg-9">
@@ -728,7 +814,7 @@
                                 <div class="destination">
                                     <a href="/detailHomestay?id={{_id}}"
                                     class="img img-2 d-flex justify-content-center align-items-center"
-                                    style="background-image: url({{feature_images.[0]}});">
+                                    style="background-image: url({{feature_images.[0].images}});">
                                     <div class="icon d-flex justify-content-center align-items-center">
                                         <span class="icon-search2"></span>
                                     </div>
@@ -746,15 +832,15 @@
                                                     <span>8 Ratings</span>
                                                 </p>
                                             </div>
-                                            &lt;!&ndash;<div class="two">&ndash;&gt;
-                                            &lt;!&ndash;<span class="price per-price">$40<br><small>/night</small></span>&ndash;&gt;
-                                            &lt;!&ndash;</div>&ndash;&gt;
+                                            <!--<div class="two">-->
+                                            <!--<span class="price per-price">$40<br><small>/night</small></span>-->
+                                            <!--</div>-->
                                         </div>
                                         <p>
 										<span>
 											<i class="material-icons"
                                                style="font-size:18px; vertical-align: middle;">access_time</i>
-                                            {{time_start}}h - {{time_end}}h
+                                            {{time_start}}:00 - {{time_end}}:00
 										</span>
                                             <br/>
                                             <span>
@@ -779,25 +865,9 @@
                             </div>
                         {{/each}}
                     </div>
-
-                    <div class="row mt-5">
-                        <div class="col text-center">
-                            <div class="block-27">
-                                <ul>
-                                    <li><a href="#">&lt;</a></li>
-                                    <li class="active"><span>1</span></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">&gt;</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> &lt;!&ndash; .col-md-9 &ndash;&gt;
+                </div>
             </div>
-        </div>-->
+        </div>
     </div>
 
     <!-- Button trigger modal -->
