@@ -38,14 +38,21 @@ router.get('/', function(req, res, next) {
             //Load comment
             Comment.find({homestay_id: req.query.id}).exec((err2, data2) => {
                 if (!err2 && data2 !== '') {
-                    res.render('detailHomestay', {
-                        title: 'Travelie - Card detail',
-                        homestay: data,
-                        comments: data2,
-                        nb_cmt: data2.length,
-                        stars: star_arr,
-                        tours: tour_arr
-                    });
+
+                    Homestay.find().exec((err3, data3) => {
+                            if (!err3 && data3 !== '') {
+                                res.render('detailHomestay', {
+                                    title: 'Travelie - Card detail',
+                                    homestay: data,
+                                    comments: data2,
+                                    nb_cmt: data2.length,
+                                    stars: star_arr,
+                                    tours: tour_arr,
+                                    other_homestay: data3
+                                });
+                            }
+                        }
+                    );
                 }
             });
         }
