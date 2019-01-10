@@ -31,7 +31,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="index">Travelie</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
 
@@ -53,11 +54,13 @@
 <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+             data-scrollax-parent="true">
             <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                 <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>Explore
                     <br></strong> your amazing homestay</h1>
-                <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Find great places to stay, eat, shop, or visit from local experts</p>
+                <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Find great places to stay, eat, shop,
+                    or visit from local experts</p>
                 <div class="block-17 my-4">
                     <form action="" method="post" class="d-block d-flex">
                         <div class="fields d-block d-flex">
@@ -154,40 +157,52 @@
         <div class="row d-flex">
             <div class="col-md-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-block text-center">
-                    <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-guarantee"></span></div></div>
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="flaticon-guarantee"></span></div>
+                    </div>
                     <div class="media-body p-2 mt-2">
                         <h3 class="heading mb-3">Best Quality Guarantee</h3>
-                        <p>2,000,000+ verified reviews from real homestay guests will help you make the right decision.</p>
+                        <p>2,000,000+ verified reviews from real homestay guests will help you make the right
+                            decision.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-block text-center">
-                    <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-like"></span></div></div>
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="flaticon-like"></span></div>
+                    </div>
                     <div class="media-body p-2 mt-2">
                         <h3 class="heading mb-3">Travellers Love Us</h3>
-                        <p>Every home has a host present and they do more than just hand over keys. They'll help you settle
+                        <p>Every home has a host present and they do more than just hand over keys. They'll help you
+                            settle
                             into life in a new place.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-block text-center">
-                    <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-detective"></span></div></div>
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="flaticon-detective"></span></div>
+                    </div>
                     <div class="media-body p-2 mt-2">
                         <h3 class="heading mb-3">Best Travel Agent</h3>
                         <p>Use our helpful features to find the perfect host family.
-                            Whether you want to borrow a bike or have full access to the kitchen we have the right room for
+                            Whether you want to borrow a bike or have full access to the kitchen we have the right room
+                            for
                             your stay.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-block text-center">
-                    <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-support"></span></div></div>
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="flaticon-support"></span></div>
+                    </div>
                     <div class="media-body p-2 mt-2">
                         <h3 class="heading mb-3">Our Dedicated Support</h3>
-                        <p>Offering quality and affordability, homestays are a great value accommodation option for short or
+                        <p>Offering quality and affordability, homestays are a great value accommodation option for
+                            short or
                             long term stays.</p>
                     </div>
                 </div>
@@ -207,42 +222,45 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            {{#each list_homestay}}
-            <div class="col-sm col-md-6 col-lg ftco-animate">
-                <div class="destination">
-                    <a href="#" class="img img-2 d-flex justify-content-center align-items-center"
-                       style="background-image: url({{feature_images.[0].images}});">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3">
-                        <div class="d-flex">
-                            <div class="one">
-                                <h3><a href="#">{{name}}</a></h3>
-                                <p class="rate">
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-o"></i>
-                                </p>
-                            </div>
-                            <div class="two">
-                                <!--<span class="price per-price">$40<br><small>/night</small></span>-->
-                            </div>
-                        </div>
+            <div class="col-md-12">
+                <div class="destination-slider owl-carousel ftco-animate">
+                    {{#each list_homestay}}
+                        <div class="col-sm col-md-6 col-lg ftco-animate">
+                            <div class="destination">
+                                <a href="#" class="img img-2 d-flex justify-content-center align-items-center"
+                                   style="background-image: url({{feature_images.[0].images}});">
+                                    <div class="icon d-flex justify-content-center align-items-center">
+                                        <span class="icon-search2"></span>
+                                    </div>
+                                </a>
+                                <div class="text p-3">
+                                    <div class="d-flex">
+                                        <div class="one">
+                                            <h3><a href="#">{{name}}</a></h3>
+                                            <p class="rate">
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star"></i>
+                                                <i class="icon-star-o"></i>
+                                            </p>
+                                        </div>
+                                        <div class="two">
+                                            <!--<span class="price per-price">$40<br><small>/night</small></span>-->
+                                        </div>
+                                    </div>
 
-                        <hr>
-                        <p class="bottom-area d-flex">
-                            <span><i class="icon-map-o"></i>  {{distance}}</span>
-                            <span class="ml-auto"><a href="/detailHomestay?id={{_id}}">Discovery</span></a>
-                        </p>
-                    </div>
+                                    <hr>
+                                    <p class="bottom-area d-flex">
+                                        <span><i class="icon-map-o"></i>  {{distance}}</span>
+                                        <!--<span class="ml-auto"><a href="/detailHomestay?id={{_id}}">Discovery</span></a>-->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
                 </div>
             </div>
-            {{/each}}
-
         </div>
     </div>
 </section>
@@ -604,8 +622,10 @@
                                     <div class="text ml-md-4">
                                         <p class="mb-5">We enjoyed ourselves immensely at Michelle's.
                                             We stayed only for a few days but it almost felt like home.
-                                            Michelle was nice and caring and at the same time greately respectful of our privacy.
-                                            The location is very convenient to reach the city centre and Michelle's daughter
+                                            Michelle was nice and caring and at the same time greately respectful of our
+                                            privacy.
+                                            The location is very convenient to reach the city centre and Michelle's
+                                            daughter
                                             Alysha is the most well-behaved,
                                             active and creative little girl I have ever met.</p>
                                         <p class="name">Dennis Green</p>
@@ -623,7 +643,8 @@
                                     <div class="text ml-md-4">
                                         <p class="mb-5">Definitely a place to try. Ann is unique and lovely.
                                             A super host who has become a friend for me. I felt like home.
-                                            Perfect location to explore the areas, near to the city with the calm of the suburb.
+                                            Perfect location to explore the areas, near to the city with the calm of the
+                                            suburb.
                                             And the double room is sooooo comfortable,
                                             trust me you want to pay the extra if it's still available ;-)</p>
                                         <p class="name">Dennis Green</p>
@@ -640,11 +661,14 @@
                                     </div>
                                     <div class="text ml-md-4">
                                         <p class="mb-5">I enjoyed my stay with Ann.
-                                            When I arrived in the evening Ann had prepared a nice salad for me which I really
+                                            When I arrived in the evening Ann had prepared a nice salad for me which I
+                                            really
                                             appreciated very much.
-                                            She gave me a lot of information, which places to visit and it was very practical to
+                                            She gave me a lot of information, which places to visit and it was very
+                                            practical to
                                             be able to fetch the DART
-                                            (running every half hour) into the center of Dublin or along the coast to visit other
+                                            (running every half hour) into the center of Dublin or along the coast to
+                                            visit other
                                             places.</p>
                                         <p class="name">Dennis Green</p>
                                         <span class="position">Guest from Philippines</span>
@@ -791,7 +815,8 @@
                     </a>
                     <div class="text p-4 d-block">
                         <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">8 Best homestay in Philippines that you don't miss out</a></h3>
+                        <h3 class="heading mt-3"><a href="#">8 Best homestay in Philippines that you don't miss out</a>
+                        </h3>
                         <div class="meta mb-3">
                             <div><a href="#">December 21, 2018</a></div>
                             <div><a href="#">Admin</a></div>
@@ -806,7 +831,8 @@
                     </a>
                     <div class="text p-4">
                         <span class="tag">Culture</span>
-                        <h3 class="heading mt-3"><a href="#">8 events to attend in Greater Palm Springs, California, USA</a>
+                        <h3 class="heading mt-3"><a href="#">8 events to attend in Greater Palm Springs, California,
+                            USA</a>
                         </h3>
                         <div class="meta mb-3">
                             <div><a href="#">December 19, 2018</a></div>
@@ -822,7 +848,8 @@
                     </a>
                     <div class="text p-4">
                         <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">Q&A: Can I carry Christmas dinner in my hand luggage?</a></h3>
+                        <h3 class="heading mt-3"><a href="#">Q&A: Can I carry Christmas dinner in my hand luggage?</a>
+                        </h3>
                         <div class="meta mb-3">
                             <div><a href="#">November 30, 2018</a></div>
                             <div><a href="#">Admin</a></div>
@@ -837,7 +864,8 @@
                     </a>
                     <div class="text p-4">
                         <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">Your car can earn you money when you park at Gatwick Airport</a>
+                        <h3 class="heading mt-3"><a href="#">Your car can earn you money when you park at Gatwick
+                            Airport</a>
                         </h3>
                         <div class="meta mb-3">
                             <div><a href="#">November 15, 2018</a></div>
@@ -857,7 +885,8 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
                     <h2>Subcribe to our Newsletter</h2>
-                    <p>With a vision of taking an offline industry online, we do this to offer guests a wide range of rental
+                    <p>With a vision of taking an offline industry online, we do this to offer guests a wide range of
+                        rental
                         rooms at budget-friendly prices as well as give hosts an opportunity to broadcast their local
                         habit.</p>
                     <div class="row d-flex justify-content-center mt-5">
@@ -882,7 +911,8 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Travelie</h2>
-                    <p>With a vision of taking an offline industry online, we do this to offer guests a wide range of rental
+                    <p>With a vision of taking an offline industry online, we do this to offer guests a wide range of
+                        rental
                         rooms at budget-friendly prices as well as give hosts an opportunity to broadcast their local
                         habit.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
@@ -947,9 +977,14 @@
 </footer>
 
 
-
 <!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00"/>
+    </svg>
+</div>
 
 
 <script src="js/jquery.min.js"></script>

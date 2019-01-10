@@ -667,8 +667,9 @@
         <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <h4 class="mb-4">Other Homestays</h4>
             <div class="row">
+                <div class="col-md-12">
+                    <div class="destination-slider owl-carousel ftco-animate">
                 {{#each other_homestay}}
-                    <div class="col-md-4 ftco-animate">
                         <div class="destination">
                             <a href="/detailHomestay?id={{_id}}"
                             class="img img-2 d-flex justify-content-center align-items-center"
@@ -720,8 +721,9 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
                 {{/each}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
