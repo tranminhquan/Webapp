@@ -785,16 +785,23 @@
         <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
             <form action="/detailHomestay/submit-comment?id={{homestay._id}}" class="p-5 bg-light" method="post">
             <div class="rate1" style="float: none; margin: 0 auto;"></div>
-            <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" class="form-control" name="name" required="">
-            </div>
+            <!--<div class="form-group">-->
+            <!--<label for="name">Name *</label>-->
+            <!--<input type="text" class="form-control" name="name" required="">-->
+            <!--</div>-->
 
-            <label for="message">Comment *</label>
-            <div class="row">
+            <!--<label for="message">Comment *</label>-->
+            <div class="row mt-4 mb-4">
+                <ul class="comment-list">
+                    <li class="comment">
+                        <div class="vcard bio">
+                            <img src="images/person_1.jpg" alt="Image placeholder">
+                        </div>
+                    </li>
+                </ul>
                 <div class="col">
                     <textarea name="content" rows="2" class="form-control mr-3" style="min-width: 100%;"
-                              required=""></textarea>
+                              required="" placeholder="What do you think?"></textarea>
                 </div>
                 <div class="col-auto">
                     <button type="submit" class="btn py-3 px-1 btn-primary">
