@@ -39,7 +39,7 @@ router.get('/', function(req, res, next) {
             Comment.find({homestay_id: req.query.id}).exec((err2, data2) => {
                 if (!err2 && data2 !== '') {
 
-                    Homestay.find().exec((err3, data3) => {
+                    Homestay.find().limit(3).exec((err3, data3) => {
                             if (!err3 && data3 !== '') {
                                 res.render('detailHomestay', {
                                     title: 'Travelie - Card detail',
