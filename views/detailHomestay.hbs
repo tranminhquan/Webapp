@@ -106,16 +106,6 @@
                 <i class="icon-my_location"></i> {{homestay.full_address}}
                 </span></a>
             </p>
-            <p class="rate">
-            <span>
-                    <i class="material-icons"
-                       style="font-size:20px; vertical-align: center;">motorcycle</i>
-                    <i class="material-icons"
-                       style="font-size:20px; vertical-align: center;">directions_car</i>
-                    <i class="material-icons"
-                       style="font-size:18px; vertical-align: center;">airplanemode_active</i>
-                </span>
-            </p>
             <p class="rate mb-5">
                 <span class="star">
                     {{#each stars}}
@@ -174,19 +164,27 @@
                                        style="font-size:18px; vertical-align: top;"></i>
                                     {{homestay.distance}}
                                 </p>
+                                <p class="p-1 pl-3 mt-2 mb-2">
+                                    <i class="material-icons"
+                                       style="font-size:22px; vertical-align: center;">motorcycle</i>
+                                    <i class="material-icons"
+                                       style="font-size:22px; vertical-align: center;">directions_car</i>
+                                    <i class="material-icons"
+                                       style="font-size:20px; vertical-align: center;">airplanemode_active</i>
+                                </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
-                                       style="font-size:18px; vertical-align: middle;">access_time</i>
+                                       style="font-size:20px; vertical-align: middle;">access_time</i>
                                     {{homestay.time_start}}:00 - {{homestay.time_end}}:00
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
-                                       style="font-size:18px; vertical-align: middle;">people</i>
+                                       style="font-size:20px; vertical-align: middle;">people</i>
                                     {{homestay.nb_people}} persons
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="far fa-calendar-alt mr-1"
-                                       style="font-size:18px; vertical-align: middle;"></i>
+                                       style="font-size:20px; vertical-align: top;"></i>
                                     {{homestay.np_days}} days
                                 </p>
                             </div>
